@@ -19,7 +19,6 @@ public class DarkSkyWatcher {
     @Autowired
     WeatherInformationRepository weatherInformationRepository;
 
-
     @Scheduled(cron = "0/5 * * * * ?")
     void refreshActuallyWeatherData() throws IOException {
         var response = weatherDataController.requestWeatherDataTimeForecast();
